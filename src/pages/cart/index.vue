@@ -49,13 +49,10 @@
     },
     methods: {},
     components: {},
-    // computed: { ...mapGetters([
-    //     'num'
-    //   ])
-    // },
-    computed: mapGetters([
-      'num'
-    ]),
+    computed: { ...mapGetters([
+        'num'
+      ])
+    },
     watch: {}
   }
 </script>

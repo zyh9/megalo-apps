@@ -8,6 +8,10 @@ const app = new Vue(App);
 
 app.$mount();
 
+// 引用vuex
+import store from './store/index';
+Vue.prototype.$store = store;
+
 export default {
 	config: {
 		// pages 的首个页面会被编译成首页

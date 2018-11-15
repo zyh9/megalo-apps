@@ -1,7 +1,8 @@
 <template>
   <div class="app">
-    <h3>首页</h3>
     <h3 @click="other">去其他页面</h3>
+    <h3 @click="addNum">点击增加</h3>
+    <h3>{{state}}</h3>
   </div>
 </template>
 
@@ -9,7 +10,9 @@
   export default {
     mpType: 'page',
     data() {
-      return {}
+      return {
+        state: 0,
+      }
     },
     beforeCreate() {
       console.log('Page Vue beforeCreate')
@@ -50,6 +53,10 @@
         wx.navigateTo({
           url: '/pagesOther/other/index'
         })
+      },
+      addNum() {
+        this.state++;
+        this.$store.dispatch('add', this.state)
       }
     },
     components: {},

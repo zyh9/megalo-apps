@@ -1,10 +1,13 @@
 <template>
   <div class="app">
-    <h3>购物车</h3>
+    <h3>获取到vuex的值：{{num}}</h3>
   </div>
 </template>
 
 <script>
+  import {
+    mapGetters
+  } from 'vuex';
   export default {
     mpType: 'page',
     data() {
@@ -46,6 +49,13 @@
     },
     methods: {},
     components: {},
+    // computed: { ...mapGetters([
+    //     'num'
+    //   ])
+    // },
+    computed: mapGetters([
+      'num'
+    ]),
     watch: {}
   }
 </script>

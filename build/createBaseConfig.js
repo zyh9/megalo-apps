@@ -86,7 +86,15 @@ function createBaseConfig( platform = 'wechat' ) {
 
         {
           test: /\.js$/,
-          use: 'babel-loader'
+          exclude: /(node_modules|bower_components)/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                babelrc: true
+              }
+            }
+          ]
         },
 
         {

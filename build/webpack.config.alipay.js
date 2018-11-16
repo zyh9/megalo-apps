@@ -1,4 +1,4 @@
-const createBaseConfig = require( './createBaseConfig' )
-const config = createBaseConfig( 'alipay' )
+const createBaseConfig = require('./createBaseConfig');
+const config = createBaseConfig('alipay');
 
-module.exports = config
+module.exports = config;

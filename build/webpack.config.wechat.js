@@ -1,4 +1,4 @@
-const createBaseConfig = require( './createBaseConfig' )
-const config = createBaseConfig( 'wechat' )
+const createBaseConfig = require('./createBaseConfig');
+const config = createBaseConfig('wechat');
 
-module.exports = config
+module.exports = config;

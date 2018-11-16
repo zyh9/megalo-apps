@@ -1,4 +1,4 @@
-const createBaseConfig = require( './createBaseConfig' )
-const config = createBaseConfig( 'swan' )
+const createBaseConfig = require('./createBaseConfig');
+const config = createBaseConfig('swan');
 
-module.exports = config
+module.exports = config;

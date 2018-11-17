@@ -12,8 +12,8 @@
   "author": "zyh9 <1124596031@qq.com>",
   "license": "ISC",
   "devDependencies": {
-    "@megalo/target": "^0.2.2",
-    "@megalo/template-compiler": "^0.3.1",
+    "@megalo/target": "^0.3.0",
+    "@megalo/template-compiler": "^0.3.2",
     "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@megalo/vhtml-plugin": "^0.1.0",
-    "megalo": "^0.3.1",
+    "megalo": "^0.3.2",
     "octoparse": "^0.2.0"
   }
 }

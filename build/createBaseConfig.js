@@ -3,6 +3,7 @@ const compiler = require('@megalo/template-compiler');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const pages = require('./entry');
 const _ = require('./util');
 
@@ -43,6 +44,10 @@ function createBaseConfig(platform = 'wechat') {
 		},
 
 		optimization: {
+			// minimize: true,//默认压缩
+			minimizer: [
+				new UglifyJsPlugin() //三方插件压缩js代码
+			],
 			splitChunks: {
 				cacheGroups: {
 					commons: {
@@ -92,7 +97,7 @@ function createBaseConfig(platform = 'wechat') {
 
 				{
 					test: /\.(css|less)$/,
-					use: [ MiniCssExtractPlugin.loader, 'css-loader', 'less-loader', 'postcss-loader' ]
+					use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader' ]
 				},
 
 				{

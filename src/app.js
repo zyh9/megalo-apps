@@ -1,8 +1,8 @@
 import App from './App';
 import Vue from 'vue';
-import VHtmlPlugin from '@megalo/vhtml-plugin';
+// import VHtmlPlugin from '@megalo/vhtml-plugin';
 
-Vue.use(VHtmlPlugin);
+// Vue.use(VHtmlPlugin);
 
 const app = new Vue(App);
 

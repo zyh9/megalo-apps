@@ -20,11 +20,11 @@ function createBaseConfig(platform = 'wechat') {
 
 		target: createMegaloTarget({
 			compiler: Object.assign(compiler, {}),
-			platform,
-			htmlParse: {
-				templateName: 'octoParse',
-				src: _.resolve(`./node_modules/octoparse/lib/platform/${platform}`)
-			}
+			platform
+			// htmlParse: {
+			// 	templateName: 'octoParse',
+			// 	src: _.resolve(`./node_modules/octoparse/lib/platform/${platform}`)
+			// }
 		}),
 
 		entry: {
@@ -82,24 +82,16 @@ function createBaseConfig(platform = 'wechat') {
 
 				{
 					test: /\.js$/,
-					exclude: /(node_modules|bower_components)/,
+					exclude: /node_modules/,
 					use: [
 						{
-							loader: 'babel-loader',
-							options: {
-								babelrc: true
-							}
+							loader: 'babel-loader'
 						}
 					]
 				},
 
 				{
-					test: /\.css$/,
-					use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader' ]
-				},
-
-				{
-					test: /\.less$/,
+					test: /\.(css|less)$/,
 					use: [ MiniCssExtractPlugin.loader, 'css-loader', 'less-loader', 'postcss-loader' ]
 				},
 

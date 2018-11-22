@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const pages = require('./entry');
 const _ = require('./util');
 
@@ -35,8 +36,10 @@ function createBaseConfig(platform = 'wechat') {
 
 		output: {
 			path: _.resolve(`dist-${platform}/`),
-			filename: 'static/js/[name].js',
-			chunkFilename: 'static/js/[id].js'
+			// filename: 'static/js/[name].js',
+			// chunkFilename: 'static/js/[id].js'
+			filename: '[name]js.js',
+			chunkFilename: '[id]js.js'
 		},
 
 		devServer: {
@@ -44,7 +47,7 @@ function createBaseConfig(platform = 'wechat') {
 		},
 
 		optimization: {
-			minimize: true,//默认压缩
+			minimize: true, //默认压缩
 			// minimizer: [
 			// 	new UglifyJsPlugin() //三方插件压缩js代码
 			// ],
@@ -115,7 +118,17 @@ function createBaseConfig(platform = 'wechat') {
 		plugins: [
 			new VueLoaderPlugin(),
 			new MiniCssExtractPlugin({
-				filename: `./static/css/[name].${cssExt}`
+				// filename: `./static/css/[name].${cssExt}`
+				filename: `[name]css.${cssExt}`
+			}),
+			//压缩css
+			new OptimizeCSSPlugin({
+				assetNameRegExp: /\.(wxss|acss|css)$/g,
+				cssProcessor: require('cssnano'),
+				cssProcessorPluginOptions: {
+					preset: [ 'default', { discardComments: { removeAll: true } } ]
+				},
+				canPrint: true
 			}),
 			new CopyWebpackPlugin([
 				{

@@ -4,9 +4,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
-const pages = require('./entry');
+// const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const { pagesEntry } = require('@megalo/entry');
 const _ = require('./util');
+const appMainFile = _.resolve('src/app.js');
 
 const CSS_EXT = {
 	wechat: 'wxss',
@@ -30,8 +31,8 @@ function createBaseConfig(platform = 'wechat') {
 		}),
 
 		entry: {
-			app: _.resolve('src/app.js'),
-			...pages
+			app: appMainFile,
+			...pagesEntry(appMainFile)
 		},
 
 		output: {

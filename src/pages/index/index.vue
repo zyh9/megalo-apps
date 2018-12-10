@@ -88,8 +88,8 @@
   }
 </script>
 
-<style lang="less" scoped>
-  ._li {
+<style lang="less">
+  li {
     display: flex;
     justify-content: space-between;
   }

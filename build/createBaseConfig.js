@@ -15,6 +15,13 @@ const CSS_EXT = {
 	swan: 'css'
 };
 
+const px2rpxLoader = {
+	loader: '@megalo/px2rpx-loader',
+	options: {
+		rpxUnit: 0.5
+	}
+};
+
 function createBaseConfig(platform = 'wechat') {
 	const cssExt = CSS_EXT[platform];
 
@@ -101,7 +108,7 @@ function createBaseConfig(platform = 'wechat') {
 
 				{
 					test: /\.(css|less)$/,
-					use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader' ]
+					use: [ MiniCssExtractPlugin.loader, 'css-loader', px2rpxLoader, 'postcss-loader', 'less-loader' ]
 				},
 
 				{

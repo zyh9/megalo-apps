@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a megalo project",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "dev:alipay": "webpack --config ./build/webpack.config.alipay.js -w",
     "dev:swan": "webpack --config ./build/webpack.config.swan.js -w",
@@ -20,9 +21,9 @@
     "@megalo/entry": "^0.1.1",
     "@megalo/px2rpx-loader": "^0.1.1",
     "@megalo/target": "^0.5.5",
-    "@megalo/template-compiler": "^0.6.3",
-    "autoprefixer": "^9.4.3",
-    "babel-loader": "^8.0.4",
+    "@megalo/template-compiler": "^0.7.0",
+    "autoprefixer": "^9.4.4",
+    "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.8",
@@ -37,18 +38,16 @@
     "postcss-mpvue-wxss": "^1.0.2",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "url-loader": "^1.1.2",
-    "vue": "2.5.17",
     "vue-loader": "^15.4.2",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "2.5.17",
     "vuex": "^3.0.1",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.2.0",
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "@megalo/vhtml-plugin": "^0.1.2",
-    "megalo": "^0.6.3",
+    "megalo": "^0.7.0",
     "octoparse": "^0.3.2"
   }
 }

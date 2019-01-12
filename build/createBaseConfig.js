@@ -129,15 +129,6 @@ function createBaseConfig(platform = 'wechat') {
 				// filename: `./static/css/[name].${cssExt}`
 				filename: `[name]css.${cssExt}`
 			}),
-			//压缩css
-			// new OptimizeCSSPlugin({
-			// 	assetNameRegExp: /\.(wxss|acss|css)$/g,
-			// 	cssProcessor: require('cssnano'),
-			// 	cssProcessorPluginOptions: {
-			// 		preset: [ 'default', { discardComments: { removeAll: true } } ]
-			// 	},
-			// 	canPrint: true
-			// }),
 			new CopyWebpackPlugin([
 				{
 					from: _.resolve(__dirname, '../static'),

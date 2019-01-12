@@ -20,9 +20,9 @@
     "@babel/runtime": "^7.2.0",
     "@megalo/entry": "^0.1.1",
     "@megalo/px2rpx-loader": "^0.1.1",
-    "@megalo/target": "^0.5.5",
-    "@megalo/template-compiler": "^0.7.0",
-    "autoprefixer": "^9.4.4",
+    "@megalo/target": "^0.5.7",
+    "@megalo/template-compiler": "^0.7.3",
+    "autoprefixer": "^9.4.5",
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
@@ -38,16 +38,16 @@
     "postcss-mpvue-wxss": "^1.0.2",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "url-loader": "^1.1.2",
-    "vue-loader": "^15.4.2",
+    "vue-loader": "^15.5.1",
     "vue-style-loader": "^4.1.2",
     "vuex": "^3.0.1",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "@megalo/vhtml-plugin": "^0.1.2",
-    "megalo": "^0.7.0",
+    "megalo": "^0.7.3",
     "octoparse": "^0.3.2"
   }
 }

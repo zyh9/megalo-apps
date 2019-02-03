@@ -4,7 +4,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-// const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const { pagesEntry } = require('@megalo/entry');
 const _ = require('./util');
 const appMainFile = _.resolve('src/app.js');

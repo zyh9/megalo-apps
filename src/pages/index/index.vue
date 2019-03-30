@@ -38,22 +38,21 @@
     // mounted() {
     //   console.log('Page Vue mounted')
     // },
-    // onLoad(options) {
-    //   // Do some initialize when page load.
-    //   console.log('Page onLoad')
-    // },
+    onLoad(options) {
+      // Do some initialize when page load.
+      // console.log('Page onLoad')
+      this.list.forEach(e => {
+        this.$set(e, 'num', 0)
+      });
+    },
     // onReady() {
     //   // Do something when page ready.
     //   console.log('Page onReady')
     // },
-    onShow() {
-      // Do something when page show.
-      // console.log('Page onShow')
-      this.list.forEach(e => {
-        // e.num = 0;
-        this.$set(e, 'num', 0)
-      });
-    },
+    // onShow() {
+    //   // Do something when page show.
+    //   console.log('Page onShow')
+    // },
     // onHide() {
     //   // Do something when page hide.
     //   console.log('Page onHide')
@@ -75,11 +74,11 @@
       add(v) {
         this.list.forEach(e => {
           if (e.text == v.text) {
-            v.num++;
-            // e.num = v.num++;
-            this.$set(e, 'num', v.num)
+            e.num++;
+            this.$set(e, 'num', e.num)
           }
         })
+        // this.$forceUpdate()
         console.log(this.list)
       }
     },

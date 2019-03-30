@@ -1,0 +1,39 @@
+{
+  "name": "megalo-other",
+  "version": "1.0.0",
+  "description": "a megalo project",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build:wechat": "megalo-cli-service build",
+    "build:alipay": "megalo-cli-service build --platform alipay",
+    "build:swan": "megalo-cli-service build --platform swan",
+    "dev:alipay": "megalo-cli-service serve --platform alipay",
+    "dev:swan": "megalo-cli-service serve --platform swan",
+    "dev:wechat": "megalo-cli-service serve"
+  },
+  "author": "zyh <1124596031@qq.com>",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@megalo/app"
+    ]
+  },
+  "devDependencies": {
+    "@megalo/babel-preset-app": "^1.0.0-alpha.1",
+    "@megalo/cli-service": "^1.0.0-alpha.8",
+    "@megalo/target": "^0.5.7",
+    "@megalo/template-compiler": "^0.8.0",
+    "copy-webpack-plugin": "^5.0.2",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0"
+  },
+  "dependencies": {
+    "@megalo/api": "^0.2.2",
+    "@megalo/vhtml-plugin": "^0.1.2",
+    "keymirror": "^0.1.1",
+    "megalo": "^0.8.0",
+    "octoparse": "^0.3.2",
+    "vuex": "^3.1.0"
+  }
+}

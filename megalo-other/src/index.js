@@ -31,20 +31,20 @@ export default {
 			selectedColor: '#090102',
 			color: '#b2b2b2',
 			list: [{
-					selectedIconPath: 'static/tabBar/index-active.png',
-					iconPath: 'static/tabBar/index.png',
+					selectedIconPath: 'native/tabBar/index-active.png',
+					iconPath: 'native/tabBar/index.png',
 					pagePath: 'pages/index/index',
 					text: '首页'
 				},
 				{
-					selectedIconPath: 'static/tabBar/cart-active.png',
-					iconPath: 'static/tabBar/cart.png',
+					selectedIconPath: 'native/tabBar/cart-active.png',
+					iconPath: 'native/tabBar/cart.png',
 					pagePath: 'pages/cart/index',
 					text: '购物车'
 				},
 				{
-					selectedIconPath: 'static/tabBar/user-active.png',
-					iconPath: 'static/tabBar/user.png',
+					selectedIconPath: 'native/tabBar/user-active.png',
+					iconPath: 'native/tabBar/user.png',
 					pagePath: 'pages/user/index',
 					text: '我的'
 				}

@@ -5,7 +5,7 @@
 ### 分包示例
 
 ```javascript
-    //app.js
+    // src/index.js
     pages: [ 'pages/index/index', 'pages/cart/index', 'pages/user/index' ],
     subPackages: [
         {

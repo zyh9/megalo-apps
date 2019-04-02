@@ -22,17 +22,17 @@
   "devDependencies": {
     "@megalo/babel-preset-app": "^1.0.0-alpha.1",
     "@megalo/cli-service": "^1.0.0-alpha.8",
-    "@megalo/target": "^0.5.7",
-    "@megalo/template-compiler": "^0.8.0",
+    "@megalo/target": "^0.7.1",
+    "@megalo/template-compiler": "^0.10.0",
     "copy-webpack-plugin": "^5.0.2",
-    "less": "^3.8.1",
+    "less": "^3.9.0",
     "less-loader": "^4.1.0"
   },
   "dependencies": {
-    "@megalo/api": "^0.2.2",
+    "@megalo/api": "^0.4.1",
     "@megalo/vhtml-plugin": "^0.1.2",
     "keymirror": "^0.1.1",
-    "megalo": "^0.8.0",
+    "megalo": "^0.10.0",
     "octoparse": "^0.3.2",
     "vuex": "^3.1.0"
   }

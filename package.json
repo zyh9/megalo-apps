@@ -22,7 +22,7 @@
   "devDependencies": {
     "@megalo/babel-preset-app": "^1.0.0-alpha.1",
     "@megalo/cli-service": "^1.0.0-alpha.8",
-    "@megalo/target": "^0.7.2",
+    "@megalo/target": "^0.7.3",
     "@megalo/template-compiler": "^0.10.1",
     "copy-webpack-plugin": "^5.0.3",
     "less": "^3.9.0",
